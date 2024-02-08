@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="Tasks.html">
+    <link rel="stylesheet" href="Team.html">
+    <link rel="stylesheet" href="media.html">
+    <link rel="stylesheet" href="gallery.html">
+    <link rel="stylesheet" href="css/screen.css">  
+
+</head>
+<body style="background-image: url(images/Bk2.jpg);">
+  <H1>Media</H1>
+        <!-- Nav Bar -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Tasks.html">Tasks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Team.html">The Crew</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="media.html">Media</a>
+        </li>
+      </ul>
+    <div>
+      <body>
+          <!-- Video source -->
+        <video id="myVideo" width="max-width" height="680" controls>
+          <source src="VID_20240202_112043_730.mp4" type="video/mp4">
+          <source src="IAM SQUID.mp4" type="video/mp4">
+
+          Your browser does not support HTML5 video.
+        </video>
+          <!-- Video controls -->
+        <div id="videoControls">
+          <button id="play" >Play</button>
+          <button id="pause">Pause</button>
+          <button id="stop">Stop</button>
+          <button id="volumeUp">Volume Up</button>
+          <button id="volumeDown">Volume Down</button>
+          <button id="slowMo">Slow Motion</button>
+          <button id="goBack">Previous</button>
+          <button id="goNext">Next</button>
+
+        </div>
+        <!-- Video functions -->
+        <script>
+        var video = document.getElementById("myVideo");
+        
+        document.getElementById("play").addEventListener("click", function() {
+          video.play();
+        });
+        
+        document.getElementById("pause").addEventListener("click", function() {
+          video.pause();
+        });
+        
+        document.getElementById("stop").addEventListener("click", function() {
+          video.pause();
+          video.currentTime = 0;
+        });
+        
+        document.getElementById("volumeUp").addEventListener("click", function() {
+          if (video.volume < 1) video.volume += 0.1;
+        });
+        
+        document.getElementById("volumeDown").addEventListener("click", function() {
+          if (video.volume > 0) video.volume -= 0.1;
+        });
+        
+        document.getElementById("slowMo").addEventListener("click", function() {
+          video.playbackRate = 0.5;
+        });
+        document.getElementById("goBack").addEventListener("click", function() {
+        var video = document.getElementById("myVideo");
+        video.src ="VID_20240202_112043_730.mp4";
+        video.play();
+        }
+        );
+        document.getElementById("goNext").addEventListener("click", function () {
+        var video = document.getElementById("myVideo");
+        video.src ="IAM SQUID.mp4";
+         video.Next();
+        })      
+        </script>
+    </body>
+</html>
+        
+            <!-- Footer start -->
+       <footer> 
+          <!-- Quote of the day -->
+          <figure class="text-center">
+             <blockquote class="blockquote">
+              <p>“Innovation distinguishes between a leader and a follower.”</p>
+           </blockquote>
+            <figcaption class="blockquote-footer">
+              <cite title="Source Title">Steve Jobs</cite>
+            </figcaption>
+         </figure>
+            <p class="small text-muted text-center">2024 our site</p>
+      </footer>
+          <!-- Footer end -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script></body>  
+
+</body>
+</html>

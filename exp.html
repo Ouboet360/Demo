@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Banner</title>
+	<style>
+		body {
+			background-color: #f4f4f4;
+			font-family: Arial, sans-serif;
+		}
+		.banner {
+			width: 800px;
+			height: 200px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			padding: 20px;
+			box-sizing: border-box;
+			margin: 50px auto;
+			position: relative;
+			text-align: center;
+		}
+		.banner h1 {
+			font-size: 36px;
+			margin-top: 0;
+			color: #333;
+			transform: translateY(-50px);
+			animation: slide-up 1s ease-out;
+		}
+		.banner input[type="text"] {
+			width: 300px;
+			height: 40px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			margin-top: 20px;
+		}
+		.banner input[type="file"] {
+			display: none;
+		}
+		.banner label[for="logo"] {
+			display: block;
+			font-size: 18px;
+			color: #333;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+		@keyframes slide-up {
+			from {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<h1>Welcome to our website!</h1>
+		<input type="text" id="name" placeholder="Enter your name here">
+		<label for="logo">Upload a logo:</label>
+		<input type="file" id="logo">
+	</div>
+</body>
+</html>
